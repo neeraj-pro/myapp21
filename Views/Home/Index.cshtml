@@ -1,0 +1,42 @@
+﻿@*@{
+    ViewData["Title"] = "Home Page";
+}*@
+<html>
+   <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    </head>
+   <body>
+
+       <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
+           <ol class="carousel-indicators">
+               <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+               <li data-target="#myCarousel" data-slide-to="1"></li>
+               <li data-target="#myCarousel" data-slide-to="2"></li>
+           </ol>
+       </div>
+       <br /><br /><br />
+     
+
+
+           @using (Html.BeginForm("Getdata", "Home", FormMethod.Post))
+           {
+               <table>
+                   <tr><td>First Name</td><td><input type="text" name="fname" required/></td></tr>
+                   <tr><td>Last Name</td><td><input type="text" name="lname" required/></td></tr>                   
+                   <tr><td>Email id</td><td><input type="text" name="email" required/></td></tr>
+                   <tr><td>Mobile Number</td><td><input type="text" name="mobile" required/></td></tr>
+                   <tr><td>State</td><td><input type="text" name="state" required/></td></tr>
+                   <tr><td>City</td><td><input type="text" name="city" required/></td></tr>
+                   <tr><td>Pin code</td><td><input type="text" name="pincode" required/></td></tr>
+                   <tr><td>Password</td><td><input type="password" name="password" required/></td></tr>
+                   <tr><td><button type="submit" class="registerbtn">Register</button></td><td><button type="reset" class="registerbtn">Reset</button></td></tr>
+                   <tr><td colspan="2"><p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p></td></tr>
+                   <tr><td colspan="2"><p>Already have an account? <a href="#">Sign in</a>.</p></td></tr>
+               </table>
+
+           }
+            
+   </body>
+    </html>
+
